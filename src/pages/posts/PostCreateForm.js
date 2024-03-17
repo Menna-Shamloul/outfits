@@ -15,8 +15,10 @@ import Asset from "../../components/Asset";
 import { Alert, Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function PostCreateForm() {
+  useRedirect("loggedOut");
 
   const [errors, setErrors] = useState({});
 
@@ -61,7 +63,7 @@ function PostCreateForm() {
         history.push(`/posts/${data.id}`);
 
     } catch(err){
-        console.log(err);
+        // console.log(err);
         if (err.response?.status !== 401) {
           setErrors(err.response?.data);
         }
