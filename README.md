@@ -204,3 +204,71 @@ Epics, user stories, bugs and issues.
 29. Update username and password: As a **user** I can **update my username/password** so that I can **make alterations as needed**
 
 [Back to top](#contents)
+### **Desgin**
+
+#### **Colour Scheme and Accessibility**
+ * I designed the color scheme around the logo which I used white and blue to color. 
+
+## **Features**
+### **Existing Features**
+* For a comprehensive list of all site features, their function and UI design.
+
+#
+### **Future Features**
+* Private messaging would be a good feature for a site like this, especially once event organisation becomes a feature.
+* Social Account sign in using apis to allow users to login via their email accounts rather than going through the whole sign up process.
+
+[Back to top](#contents)
+
+## **Technologies** 
+### **Languages used**
+- [Python](https://www.python.org/) 
+
+- [HTML](https://www.w3schools.com/html/html_intro.asp)
+
+- [CSS](https://www.w3schools.com/css/css_intro.asp)
+
+- [JS](https://reactjs.org/)
+
+### **Databases**
+- [Postgresql](https://www.postgresql.org/)
+
+### **Cloud storage and deployment services**
+- [Cloudinary](https://cloudinary.com/)
+    - Used to store media files and images.
+- [Heroku](https://www.heroku.com/)
+    - Used to host the deployed sitewhat
+- [ElephantSQL]() 
+    - Used to host and operate the PostgresSQL database
+
+[Back to top](#contents)
+
+### **Frameworks, tools and libraries**
+#### **API Back-End**
+- [Django Rest Framework](https://www.django-rest-framework.org/)
+- [Psycopg2](https://pypi.org/project/psycopg2/)
+- [django_filters](https://django-filter.readthedocs.io/en/stable/guide/install.html) 
+- [dj_rest_auth](https://dj-rest-auth.readthedocs.io/en/latest/installation.html)
+- [rest_framework.authtoken](https://pypi.org/project/django-rest-authtoken/)
+- [dj_rest_auth.registration](https://dj-rest-auth.readthedocs.io/en/latest/installation.html)
+- [allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+- [corsheaders](https://pypi.org/project/django-cors-headers/)
+- [JSON WEB tokens](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html)
+
+
+[Back to top](#contents)
+   
+#### **Front-End**
+- [React JS](https://reactjs.org/)
+- [JSON Web Tokens](https://jwt.io/)
+- [React Bootstrap](https://react-bootstrap-v4.netlify.app/)
+- [react-simple-star-rating](https://www.npmjs.com/package/react-simple-star-rating/v/4.0.5)
+- [React Router](https://v5.reactrouter.com/web/guides/quick-start)
+- [Font Awesome](https://fontawesome.com/)
+- [Favicon.io](https://favicon.io/favicon-converter/)
+- [Schemecolor](https://www.schemecolor.com/)
+- [Pixabay](https://pixabay.com/)
+- [Google fonts](https://fonts.google.com/)
+- [Markdown TOC generator](https://magnetikonline.github.io/markdown-toc-generate/)
+
+[Back to top](#contents)
