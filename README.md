@@ -112,10 +112,10 @@ Epics, user stories, bugs and issues.
  * Initial plans were to include an event model, but that has been assigned as a future feature to help focus on the minimal viable product of  the site. 
 
 #### **List of Wireframe pages**
-- [Home page]()
-- [Sign up page]()
-- [Sign in page]()
-- [Profile page]()
+![Home page]()
+![Sign up page]()
+![Sign in page]()
+![Profile page]()
 
 [Back to top](#contents)
 #
@@ -272,3 +272,133 @@ Epics, user stories, bugs and issues.
 - [Markdown TOC generator](https://magnetikonline.github.io/markdown-toc-generate/)
 
 [Back to top](#contents)
+
+### **Installed packages, libraries and componenets**
+
+- React
+   - npx create-react-app . --use-npm
+   - Main JavaScript framework for creating the UI
+- Node 
+   - Package manager used to install dependencies
+- React simple star rating: 
+   - npm i react-simple-star-rating@4.0.5
+   - Star rating component as a rating field in the Posts model. 
+- React Router: 
+   - npm install react-router-dom
+   - Handles routing of the React app:
+       - Keeps the UI in sync with the URL and only renders components required by whichever URL path the user navigates to.
+- Axios library:
+   - npm install axios
+   - Tells React app to send requests to the api
+- React Infinite scroll
+   - npm install react-infinite-scroll-component
+   - Used with list pages instead of pagination
+   - Utilised by posts and comments when there are long lists of these components
+- jwtDecode library: 
+   - npm install jwt-decode 
+   - Stops unneccessary network requests every time unauthenticated user interacts with the app.
+   - Stores the logged in user's refresh token timestamp in the browser using localStorage.
+   - Then check if this timestamp exists and only if it does make attempt to refresh access token.
+
+[Back to top](#content)
+
+## **Components**
+Below are some components not featured in user stories testing but which have been implemented within this project that have been reused throughout the project:
+
+1. axiosDefault.js : Send http request to the backend API in the case of user crud actions or get requests for a specific object or list of objects.
+2. Asset.js : exports the loading spinner when/where requied in the site.
+3. Avatar.js exports users' avatar image to the popular profileslist, profile page and navbar profile link. 
+3. MoreDropdown.js : displays menu to authorised users with options to edit/delete Posts, comments and profile details. 
+4. CurrentUserContext.js : confirm users logged-in status to determine what functionality is available to that user.
+5. ProfileDataContext.js : provide un/follow ability to authorised user via popular profiles componenet and profile page component.
+6. useRedirect.js : redirects a user to another page if they are not authorised to be on the page they are trying to access.
+7. useClickOutsideToggle.js : Implemented for the mobile dropdown nav component.
+8.  utils.js : supplies functionality to all of the components that utilise the Infinite Scroll.
+
+[Back to top](#contents)
+
+## **Testing**
+
+## **Bugs**
+### **Unresolved bugs**
+When i create post there is chosse file icon appear and i try to fixed it with tutor but i cant fixed it.
+
+[Back to top](#contents)
+
+
+## **Gitpod set up and deployment**
+- This project was created and developed using gitpod using the following steps: 
+### Set-up in gitpod
+   - Navigate to your github repository page and click the green "new" button to create a new repo.
+   - choose a name with all lower case letters: trekkers
+   - Click the green "create repository" button.
+   - Click the Green "Gitpod button to create a workspace.
+   - Enter the following commands:
+      - npx create-react-app . --use-npm
+      - npm install -g npm@9.6.6
+   - Run npm start to check the app is working.
+   - Add extension to help manage the code:
+      - ES7 React/Redux/GraphQl/React-Native : (snippets) by dsznajder
+      - Prettier : (Code formatter) by esbenp
+   - Commit  and push to github tr prepare for initial deployment.
+
+[Back to top](#contents)
+#
+### Initial Deployment
+- Navigate to heroku for initial deployment
+- Click on the "new" dropdown and select "Create new app"
+- Give the app a name and select the region, I selected Europe for this app. 
+- Click the Create app button 
+- Under the "Deploy" tab, click on github for deployment method and connect the app.
+- Once the app  is connected to the correct github repository, click "Deploy Branch" and open the app in the browser to make sure it works.
+
+[Back to top](#contents)
+
+### Connect the Frontend app with the Backend API
+- In order to connect not only the deployed Frontend app but also the development version of the app, we need to provide both heroku and local urls to the API on heroku.
+- This was done using the following steps: 
+1. Navigate to the deployed Backend api on heroku and go to the "Settings" tab.
+2. Set two new Config Vars.
+- Next we need to tell the Frontend app where to send requests to.
+- This was done using the Axios library using the following steps: 
+1. Install the Axios library : npm install axios.
+2. Create an api folder inside the src folder and inside create an axiosDefaults.js file. 
+3. Set the baseURL to the deployed api,and set the content type and Credentials.
+
+[Back to top](#contents)
+#
+### Final Deployment
+- In GITPOD IDE:
+
+1. Remove React.StrictMode component from index.js.
+2. Optimise bootstrap imports by making sure each component is imported individually:
+Example:
+
+   ```
+   import Navbar from "react-bootstrap/Navbar";
+   import Container from "react-bootstrap/Container";
+   import Nav from "react-bootstrap/Nav";
+   ```
+3. Remove console.logs
+   - note: I am following the advice of the moments walkthrough instructions and have left the console.logs inside the catch blocks commented out fr easy access to debug things later.
+
+4. Add the Heroku deployment commands in package.json in the "scripts" section.
+```
+   "heroku-prebuild": "npm install -g serve",
+```
+5. Add a Procfile to the root of the project with the following command: 
+```
+web: serve -s build
+```
+6. After pushing the final version to GitHub, navigate to the app on heroku.
+      - Under the deploy tab, scroll to the bottom of the page and click the "Deploy Branch" button.
+      - Ensure the build is successful and open the app.
+      - Test all feautures in in the final deployed app to make sure everythin is the same and working as it should. 
+
+[Back to top](#contents)
+## **Credits**
+### Code Institute
+This project is a variation and laregely based on the [Code Institute Moments](https://github.com/Code-Institute-Solutions/moments) walkthrough project.
+It contains styles and logic from that project which have bee modified for the prupose of this one.
+
+
