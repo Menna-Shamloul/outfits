@@ -318,6 +318,119 @@ Below are some components not featured in user stories testing but which have be
 [Back to top](#contents)
 
 ## **Testing**
+### **Manual testing**
+This site is tested manually for different device sizes and browsers but the login functionality work only in google chrome and on computer,but not work in phone.
+The resonsivity site is tested use google chrome devtools. 
+The site was showen to be fully responsive, readable and functional on all of devices.
+
+### **Testing user stories**
+1. Sign up: As a **user** I can **create an account** so that I can **access all the site features**
+    - Sign up page allows new users to create an account.
+    - Handles errors for duplicate username, blank fields or mismatching passwords.
+    - Tested all links working as normal. 
+    - The link to the sign in page will redirect user to sign in page.
+    - If all form fields are valid and user clicks sign up they will be redirected to the sign in page.
+2. Sign in: As a **user** I can **login** so that I can **access features only available to logged in users**
+
+    - Sign in page allows users who have created an account to sign in in order to access all the site features.
+    - Handles errors for incorrect credentials and blank fields.
+    - Tested all links working as normal. 
+    - The link to the sign up page will redirect user to sign up page as expected.
+    - If all form fields are valid and user clicks sign in, they will be redirected to the homepage.
+3. Sign out: As a **user** I can **logout** so that I can **exit my account and prevent others from gaining access**
+    - The Navbar displays a sign out button to logged in users so that they can sign out from any page in the site.
+4. Refreshing access tokens: As a **user** I can **maintain my logged in status for 24 hours** so that I can **easily interact with the app throughout the day**.
+
+    - Unless users click the sign out button, they remain logged in for 24 hours.
+5. Create superuser: As a **site owner** I can **create a superuser** so that **I can give admin users access to the admin panel**.
+
+  - This is a Backend api feature.
+6. As a **user** I can **quickly view my logged in/out status in the navbar** so that I can **decide on my next action**
+
+    - The Navbar displays a home, sign in and sign up link to logged out users so they can choose to interact with the site on a read only basis or sign in/up to access more features.
+	- Once signed in the navbar gives the user access to other actions and pages such as add post, liked posts, feed and the users profile link with their avatar.
+7. Routing: As a **user** I can **view the navbar on every page** so that I can **easily navigate through the site**.
+
+    - The Navbar has been tested on every page and in different screen sizes. 
+    - The navbar is fully responsive and fully functional.
+    - Active navlinks are in green  to help the user know which page they are currently on.
+    - When the user hovers over a navlink it will go green like the active navlink to help user know which link their mouse is over.
+    - Both the logo and site name act as home navlinks to make it convenient and easy to get back to the home page.
+8. Popular profiles list: As a **logged in user** I can **view other user’s profile names and avatars** so that I can **easily identify and follow other users**
+
+    - The popular profiles list is displayed on the right of the screen for desktop users and at the top just under navbar for mobile users.
+    - Profile avatars act as links to other users profiles, all these links have been tested and redirect to the correct profiles.
+9. Create a post: As a **logged in user** I can **create a new post** so that I can **share my experiences and suggestions for good hikes and walks I’ve been on**.
+
+    - Logged in users have access to the add post form and can create a post about their trail.
+10. Edit a post: As a **logged in user** I can **edit my post** so that I can **revise my content**
+
+    - Post owners have the ability to edit their posts from the post detail page via the three dot dropdown menu.
+	- All fields have been tested to see if the edited value is updated as expected and in each case they pass. 
+    - If all form fields are valid and the user clicks save, they are redirected to the post detail again.
+    - If the user clicks cancel in this case they will be redirected to the post details page.
+11. Delete a post: As a **logged in user** I can **delete my post** so that I can **remove content I have posted**
+
+    - Post owners have the ability to delete their posts via the post detail page.
+    - Post detail displays a three dot dropdown menu to users who are the post owner.
+    - If the user clicks delete the post will be removed from the site and the user will be redirected to whatever page they navigated to the posts detail from, ie. their own profile or the home page.
+    - In the Backend API the post model has an ondelete cascade so all comments and likes associated with the post will be deleted.
+12. View all posts: As a **user** I can **view all posts** so that I can **see what trails other users have walked and how they were**
+
+    - All posts are avaialable to be viewed by both logged-in and logged-out users via the home page.
+13. View post detail: As a **user** I can **view individual post details** so that I can **view other details and comments about the post**
+
+    - All users can view the post detail of individual posts.
+    - All users can view the comments under the post and see how many likes the post has. 
+    - Only logged in users will have the ability to post a comment or like a post.
+14. Like a post: As a **logged in user** I can **like a post** so that I can **quickly show my appreciation for another users content**
+
+    - Logged-in users can like posts via the home page, post detail page or their feed.
+    - Clicking the heart icon will add the post to liked posts and fills in the heart icon with a red color.
+	- Logged-out user cant make like.
+15. View liked posts: As a **logged in user** I can **view liked posts** so that I can **easily find the posts about trails that interested me**
+
+    - Logged-in users can view their liked posts page to easily find trails they are interested in and want to keep easily accessible by liking.
+16. Search posts: As a **user** I can **search posts** so that I can **find a post by author, trail name or location**
+
+    - The search bar allows users to search for posts by keywords including post author, location, country, trail name, difficulty.
+    - It funtcions and displays correclty on all screen sizes, on the homepage, feed and liked page.
+17. Create a comment: As a **user** I can **leave a comment under a post** so that I can **express my opinion and engage with the content and the community**
+
+    - Logged-in users have access to a comment form via the post detail page.
+    - Clicking the comment icon underneath a post will redirect the user straight down to the comments form on the post detail page, but the user can also access it by simply clicking on the post and scrolling down manually.
+18. Comment date: As a **user** I can **see the comment date** so that I can **know how long a go a comment was left**
+
+    - The amount of time since the comment was first created or last updated is published beside the comment to show users how old the comment is.
+19. Edit comments: As a **user** I can **edit my comment** so that I can **revise the information**
+
+    - If the user is the owner of a comment, a three dot dropdown will be displayed in the right hand corner of the published comment.
+    - This dropdown menu contains the icon-link to open the edit comment form. 
+20. Delete comments: As a **user** I can **delete my comment** so that I can **remove it from the post**
+
+    - The delete icon is also available to comment owners via the three dot dropdown.
+    - If the user clicks the delete icon, the comment is removed from the post detail page and the comments count goes down by 1.
+21. Profile page: As a **user** I can **view another user’s profile page** so that I can **see their posts and their bio**
+
+    - Both logged-in and logged-out users have access to other users' profile pages.
+    - Logged-in users will have access to a follow/unfollow button when visiting other users' profiles
+    - Logged-in users will have acccess to an edit dropdown menu for their own profile.
+22. Follow/Unfollow a user: As a **logged in user** I can **follow other users whose content is more relevant or meaningful to me** so that I can **view content filtered by the users I follow**
+
+    - As seen above, logged-in users have access to a follow button so that they can follow users whose content they enjoy.
+    - The follow button toggles between follow and unfollow depending on whether the user currently follows the given profile or not. 
+    - The posts of profile owners that the current user follows will be added to their feed, so they can easily see when a user they follow posts new content.
+    - If the current logged-in user doesn't follow any profiles, their feed will display a message suggesting that they follow a profile.
+23. Edit Profile: As a **user** I can **edit my profile** so that I can **update my personal details**
+
+    - If the current logged-in user is the owner of a profile, a three dot dropdown will be displayed in the Profile header
+    - This dropdown menu contains the icon-links to edit the profile, change the username,change the image and change the password or delete them. 
+
+
+### **Code validation**
+1. HTML validation : no errors found.
+2. CSS validation : no errors found.
+3. JSX validation : 
 
 ## **Bugs**
 ### **Unresolved bugs**
