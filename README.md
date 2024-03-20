@@ -3,7 +3,7 @@
 Outfits is a social media platform for hikers and people who love the outdoors. It was created using React and Django Rest Frameowork. The purpose of the site is to allow users to share posts about trails they like in their local area or hiking trips they've taken. 
 
 #
-![pass-form-blank]()
+
 * [Deloyed Front-End page](https://outfit-ms-4ee7085bae68.herokuapp.com/)
 
 ## **Contents**
@@ -112,10 +112,13 @@ Epics, user stories, bugs and issues.
  * Initial plans were to include an event model, but that has been assigned as a future feature to help focus on the minimal viable product of  the site. 
 
 #### **List of Wireframe pages**
-![Home page]()
-![Sign up page]()
-![Sign in page]()
-![Profile page]()
+![Home page](readme/hom_page.png)
+
+![Sign up page](readme/siginupp_image.png)
+
+![Sign in page](readme/signinn_image.png)
+
+![Profile page](readme/profille_image.png)
 
 [Back to top](#contents)
 #
@@ -315,6 +318,8 @@ Below are some components not featured in user stories testing but which have be
 7. useClickOutsideToggle.js : Implemented for the mobile dropdown nav component.
 8.  utils.js : supplies functionality to all of the components that utilise the Infinite Scroll.
 
+![Wireframe-ph](readme/frame_image.png)
+
 [Back to top](#contents)
 
 ## **Testing**
@@ -430,7 +435,7 @@ The site was showen to be fully responsive, readable and functional on all of de
 ### **Code validation**
 1. HTML validation : no errors found.
 2. CSS validation : no errors found.
-3. JSX validation : 
+3. JSX validation : there is minor error like line is to long and blank line but i dont fix them beacuse the time issue.
 
 ## **Bugs**
 ### **Unresolved bugs**
