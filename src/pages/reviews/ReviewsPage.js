@@ -40,7 +40,7 @@ const ReviewsPage = ({ message }) => {
       }
     };
 
-    const fetchArtist = async () => {
+    const fetchPost = async () => {
       try {
         const { data } = await axiosReq.get(`/posts/${id}`);
         setPostData(data);
