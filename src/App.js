@@ -16,6 +16,7 @@ import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import ReviewsPage from "./pages/reviews/ReviewsPage";
 import ReviewCreateForm from "./pages/reviews/ReviewCreateForm";
+import ContactCreateForm from "./pages/contacts/ContactCreateForm";
 
 
 function App() {
@@ -78,6 +79,11 @@ function App() {
             exact
             path="/reviews/:id/create/"
             render={() => <ReviewCreateForm />}
+          />
+          <Route
+            exact
+            path="/contact/create/"
+            render={() => <ContactCreateForm />}
           />
           <Route render={() => <p>Page not found!</p>} />
 
