@@ -6,7 +6,7 @@ import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import Avatar from '../../components/Avatar';
 import { axiosRes } from '../../api/axiosDefaults';
 import { MoreDropdown } from '../../components/MoreDropdown';
-
+import { Rating } from "react-simple-star-rating";
 const Post = (props) => {
   const {
     id,
@@ -22,6 +22,8 @@ const Post = (props) => {
     updated_at,
     postPage,
     setPosts,
+    reviews_count,
+    average_rating,
 
   } = props;
 
@@ -135,6 +137,12 @@ const Post = (props) => {
                 <Link to={`/reviews/${id}/create/`}>
                     Create a Review 
                 </Link>
+                {reviews_count}
+                <p className="text-center">
+                   Rating:
+                  {" "}
+                   <Rating readonly initialValue={average_rating} size={25} />
+                </p>
 
             </div>
         </Card.Body>
