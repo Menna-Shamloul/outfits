@@ -131,6 +131,11 @@ const Post = (props) => {
                     <i className="far fa-comments" />
                 </Link>
                 {comments_count}
+                <hr/>
+                <Link to={`/reviews/${id}/create/`}>
+                    Create a Review 
+                </Link>
+
             </div>
         </Card.Body>
 
