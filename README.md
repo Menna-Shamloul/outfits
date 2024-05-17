@@ -21,12 +21,16 @@ Outfits is a social media platform for hikers and people who love the outdoors. 
 		- [Posts](#posts)
 		- [Comments](#comments)
 		- [Profiles](#profiles)
+        - [Contacts](#contacts)
+        - [Reviews](#reviews)
 	- [**User Stories**](#user-stories)
 		- [**Epic 1: Authentication**](#epic-1-authentication)
 		- [**Epic 2: Navigation:**](#epic-2-navigation)
 		- [**Epic 3: Posts**](#epic-3-posts)
 		- [**Epic 4: Comments**](#epic-4-comments)
 		- [**Epic 5: Profiles**](#epic-5-profiles)
+        - [**Epic 6: Contacts**](#epic-6-contacts)
+        - [**Epic 7: Reviews**](#epic-7-reviews)
 	- [**Design**](#design)
 		- [**Images**](#images)
 		- [**Colour Scheme and Accessibility**](#colour-scheme-and-accessibility)
@@ -128,6 +132,8 @@ Epics, user stories, bugs and issues.
 #### [Posts](#epic-3-posts)
 #### [Comments](#epic-4-comments)
 #### [Profiles](#epic-5-profiles)
+#### [Contacts](#epic-6-contacts)
+#### [Reviews](#epic-7-reviews)
 
 
 ### **User Stories**
@@ -205,6 +211,12 @@ Epics, user stories, bugs and issues.
 28. Edit Profile: As a **user** I can **edit my profile** so that I can **update my personal details**
  
 29. Update username and password: As a **user** I can **update my username/password** so that I can **make alterations as needed**
+
+#### **Epic 6: Contact**
+30. Contacts: As a **user** I can **contact the site owner** so that I can **report issues or queries.**
+
+#### **Epic 7: Reviews**
+31. As a **user** I can **rate an posts** so that **owthers can see my rating and number of review**
 
 [Back to top](#contents)
 ### **Desgin**
@@ -429,7 +441,10 @@ The site was showen to be fully responsive, readable and functional on all of de
 23. Edit Profile: As a **user** I can **edit my profile** so that I can **update my personal details**
 
     - If the current logged-in user is the owner of a profile, a three dot dropdown will be displayed in the Profile header
-    - This dropdown menu contains the icon-links to edit the profile, change the username,change the image and change the password or delete them. 
+    - This dropdown menu contains the icon-links to edit the profile, change the username,change the image and change the password or delete them.
+24. Ensure a user can contact site owner by click contact us in navbar and file contact form.
+25. Ensure a user can make reviews on posts by click create reviews and filling form.
+26. Ensure average rating is displayed correctly by checking database for post. 
 
 
 ### **Code validation**
